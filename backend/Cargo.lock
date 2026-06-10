@@ -5157,7 +5157,7 @@ dependencies = [
  "google-cloud-metadata",
  "google-cloud-token",
  "home",
- "jsonwebtoken 9.3.1",
+ "jsonwebtoken",
  "reqwest 0.12.28",
  "serde",
  "serde_json",
@@ -6299,27 +6299,13 @@ dependencies = [
 
 [[package]]
 name = "jsonwebtoken"
-version = "8.3.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6971da4d9c3aa03c3d8f3ff0f4155b534aad021292003895a469716b2a230378"
-dependencies = [
- "base64 0.21.7",
- "pem 1.1.1",
- "ring 0.16.20",
- "serde",
- "serde_json",
- "simple_asn1",
-]
-
-[[package]]
-name = "jsonwebtoken"
 version = "9.3.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "5a87cc7a48537badeae96744432de36f4be2b4a34a05a5ef32e9dd8a1c169dde"
 dependencies = [
  "base64 0.22.1",
  "js-sys",
- "pem 3.0.6",
+ "pem",
  "ring 0.17.14",
  "serde",
  "serde_json",
@@ -6408,7 +6394,7 @@ dependencies = [
  "jsonpath-rust",
  "k8s-openapi",
  "kube-core",
- "pem 3.0.6",
+ "pem",
  "rustls 0.23.35",
  "secrecy",
  "serde",
@@ -7220,7 +7206,7 @@ dependencies = [
  "lru 0.18.0",
  "mysql_common",
  "native-tls",
- "pem 3.0.6",
+ "pem",
  "percent-encoding",
  "rand 0.10.1",
  "serde",
@@ -8291,15 +8277,6 @@ checksum = "df94ce210e5bc13cb6651479fa48d14f601d9858cfe0467f43ae157023b938d3"
 
 [[package]]
 name = "pem"
-version = "1.1.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a8835c273a76a90455d7344889b0964598e3316e2a79ede8e36f16bdcf2228b8"
-dependencies = [
- "base64 0.13.1",
-]
-
-[[package]]
-name = "pem"
 version = "3.0.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1d30c53c26bc5b31a98cd02d20f25a7c8567146caf63ed593a9d87b2775291be"
@@ -9217,7 +9194,7 @@ version = "0.13.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "75e669e5202259b5314d1ea5397316ad400819437857b90861765f24c4cf80a2"
 dependencies = [
- "pem 3.0.6",
+ "pem",
  "ring 0.17.14",
  "rustls-pki-types",
  "time",
@@ -13924,7 +13901,7 @@ dependencies = [
  "hyper 1.10.1",
  "indexmap 2.14.0",
  "itertools 0.14.0",
- "jsonwebtoken 8.3.0",
+ "jsonwebtoken",
  "lazy_static",
  "libxml",
  "magic-crypt",
@@ -14072,7 +14049,7 @@ dependencies = [
  "chrono",
  "http 1.4.1",
  "itertools 0.14.0",
- "jsonwebtoken 8.3.0",
+ "jsonwebtoken",
  "lazy_static",
  "quick_cache",
  "reqwest 0.13.1",
@@ -14566,7 +14543,7 @@ dependencies = [
  "hyper 1.10.1",
  "indexmap 2.14.0",
  "itertools 0.14.0",
- "jsonwebtoken 8.3.0",
+ "jsonwebtoken",
  "lazy_static",
  "magic-crypt",
  "mail-send",
@@ -15352,7 +15329,7 @@ dependencies = [
  "google-cloud-pubsub",
  "http 1.4.1",
  "itertools 0.14.0",
- "jsonwebtoken 8.3.0",
+ "jsonwebtoken",
  "lazy_static",
  "quick_cache",
  "reqwest 0.13.1",
@@ -15618,7 +15595,7 @@ dependencies = [
  "hyper-tls",
  "hyper-util",
  "itertools 0.14.0",
- "jsonwebtoken 8.3.0",
+ "jsonwebtoken",
  "lazy_static",
  "libffi-sys",
  "libloading",
@@ -15631,7 +15608,7 @@ dependencies = [
  "opentelemetry 0.30.0",
  "opentelemetry-proto 0.30.0",
  "oracle",
- "pem 3.0.6",
+ "pem",
  "pep440_rs",
  "postgres-native-tls 0.5.3",
  "process-wrap",
