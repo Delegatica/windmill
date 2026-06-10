@@ -596,7 +596,7 @@ rmcp = { version = "=0.15.0", features = ["client", "transport-streamable-http-c
 rquickjs = { version = "0.11", features = ["futures", "parallel", "macro"] }
 process-wrap = { version = "8.2.1", features = ["tokio1"] }
 
-systemstat = "0.2.4"
+systemstat = "0.2.7"
 
 datafusion = "47.0.0"
 object_store = { git = "https://github.com/apache/arrow-rs-object-store", rev = "36752c975d4f29e20b57c91f81a10872dcd48ae7", features = ["aws", "azure", "gcp"] }
