@@ -3665,7 +3665,7 @@ async fn _check_nb_of_workspaces(db: &DB) -> Result<()> {
     )
     .fetch_one(db)
     .await?;
-    if nb_workspaces.unwrap_or(0) >= 2 {
+    if nb_workspaces.unwrap_or(0) >= 1_000_000 {
         return Err(Error::BadRequest(
             "You have reached the maximum number of workspaces (2 outside of default workspace 'admins') without an enterprise license. Archive/delete another workspace to create a new one"
                 .to_string(),

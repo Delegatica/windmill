@@ -218,7 +218,7 @@ async fn _check_nb_of_groups(db: &DB) -> Result<()> {
     let nb_groups = sqlx::query_scalar!("SELECT COUNT(*) FROM group_ WHERE name != 'all' AND name != 'error_handler' AND name != 'slack' AND name != 'wm_deployers'",)
         .fetch_one(db)
         .await?;
-    if nb_groups.unwrap_or(0) >= 3 {
+    if nb_groups.unwrap_or(0) >= 1_000_000 {
         return Err(Error::BadRequest(
             "You have reached the maximum number of groups (3 outside of native groups 'all', 'slack', 'error_handler' and 'wm_deployers') without an enterprise license"
                 .to_string(),

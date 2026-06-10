@@ -152,7 +152,7 @@ pub async fn check_nb_of_user(db: &DB) -> error::Result<()> {
         sqlx::query_scalar!("SELECT COUNT(*) FROM password WHERE login_type != 'password'",)
             .fetch_one(db)
             .await?;
-    if nb_users_sso.unwrap_or(0) >= 10 {
+    if nb_users_sso.unwrap_or(0) >= 1_000_000 {
         return Err(error::Error::BadRequest(
             "You have reached the maximum number of oauth users accounts (10) without an enterprise license"
                 .to_string(),
@@ -162,7 +162,7 @@ pub async fn check_nb_of_user(db: &DB) -> error::Result<()> {
     let nb_users = sqlx::query_scalar!("SELECT COUNT(*) FROM password",)
         .fetch_one(db)
         .await?;
-    if nb_users.unwrap_or(0) >= 50 {
+    if nb_users.unwrap_or(0) >= 1_000_000 {
         return Err(error::Error::BadRequest(
             "You have reached the maximum number of accounts (50) without an enterprise license"
                 .to_string(),
