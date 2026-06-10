@@ -102,7 +102,7 @@
 		"@tutorlatin/svelte-tiny-virtual-list": "^3.0.16",
 		"@windmill-labs/svelte-dnd-action": "^0.9.44",
 		"@xterm/addon-fit": "^0.10.0",
-		"@xyflow/svelte": "^1.0.0",
+		"@xyflow/svelte": "^1.6.0",
 		"ag-charts-community": "^9.0.1",
 		"ag-charts-enterprise": "^9.0.1",
 		"ag-grid-community": "^31.3.4",
