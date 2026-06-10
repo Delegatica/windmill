@@ -621,7 +621,7 @@
 		}
 	},
 	"optionalDependencies": {
-		"@rollup/rollup-linux-x64-gnu": "^4.35.0",
+		"@rollup/rollup-linux-x64-gnu": "^4.61.1",
 		"fsevents": "^2.3.3"
 	}
 }
