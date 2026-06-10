@@ -73,7 +73,7 @@ jobs:
             org.opencontainers.image.licenses=Windmill-Enterprise-License
 
       - name: Install crane
-        uses: imjasonh/setup-crane@v0.4
+        uses: imjasonh/setup-crane@v0.6
 
       - name: Extract binaries with crane
         run: |
