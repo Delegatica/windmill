@@ -38,7 +38,7 @@ jobs:
           file: ./Dockerfile
           push: true
           build-args: |
-            features=ce
+            features=static_frontend,mcp
           tags: |
             ${{ env.IMAGE }}:${{ env.TAG }}
             ${{ env.IMAGE }}:latest
