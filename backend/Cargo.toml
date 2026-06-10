@@ -451,7 +451,7 @@ rustpython-parser = "^0"
 pep440_rs = "0.7.3"
 php-parser-rs = { git = "https://github.com/php-rust-tools/parser", rev = "ec4cb411dec09450946ef57920b7ffced7f6495d" }
 cron = "^0"
-mail-send = { version = "0.4.0", features = ["builder"], default-features=false }
+mail-send = { version = "0.5.1", features = ["builder"], default-features=false }
 urlencoding = "^2"
 url = { version = "^2" , features = ["serde"]}
 async-oauth2 = "0.5.1"
