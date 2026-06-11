@@ -1,7 +1,11 @@
 name: build-delegatica-image
 
 # Patched Windmill (CE limits lifted) → GHCR. OSS-clean feature subset (no private EE repo):
-# static_frontend (UI) + mcp (MCP server) + http_trigger (public HTTP routes, for OAuth callbacks).
+# static_frontend (UI) + mcp (MCP server) + http_trigger (public HTTP routes, for OAuth callbacks)
+# + python + deno_core (language runtimes; bash/go are featureless and always available).
+# NOTE: languages are NOT pulled by static_frontend/mcp — they must be listed explicitly, else jobs
+# fail with "<lang> requires the <lang> feature to be enabled". all_languages is OSS-clean too
+# (the EE `private` dep comes from ce_core, not from the languages) — add more here if ever needed.
 on:
   push:
     branches: [main]
@@ -38,7 +42,7 @@ jobs:
           file: ./Dockerfile
           push: true
           build-args: |
-            features=static_frontend,mcp,http_trigger
+            features=static_frontend,mcp,http_trigger,python,deno_core
           tags: |
             ${{ env.IMAGE }}:${{ env.TAG }}
             ${{ env.IMAGE }}:latest
