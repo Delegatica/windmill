@@ -1,7 +1,7 @@
 name: build-delegatica-image
 
-# Patched Windmill (CE limits lifted) → GHCR. Built with features=ce to match the
-# official CE image (static_frontend/UI + mcp + all CE features).
+# Patched Windmill (CE limits lifted) → GHCR. OSS-clean feature subset (no private EE repo):
+# static_frontend (UI) + mcp (MCP server) + http_trigger (public HTTP routes, for OAuth callbacks).
 on:
   push:
     branches: [main]
@@ -38,7 +38,7 @@ jobs:
           file: ./Dockerfile
           push: true
           build-args: |
-            features=static_frontend,mcp
+            features=static_frontend,mcp,http_trigger
           tags: |
             ${{ env.IMAGE }}:${{ env.TAG }}
             ${{ env.IMAGE }}:latest
